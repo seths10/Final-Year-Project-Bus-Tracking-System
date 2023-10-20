@@ -1,0 +1,8 @@
+LORAWAN Gateway DOCS
+
+Configuration files
+=== /opt/ttn-gateway/packet_forwarder/lora_pkt_fwd
+=:= Contains the global_conf.json and local_conf.json files
+
+
+

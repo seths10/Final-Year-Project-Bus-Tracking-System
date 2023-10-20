@@ -1,0 +1,18 @@
+function Decode(bytes, port) {
+  var lat_coord = bytes[0] << 24 | bytes[1] << 16 | bytes[2] << 8 | bytes[3];
+  var lat = lat_coord / 1000000 - 90;
+
+  var lon_coord = bytes[4] << 24 | bytes[5] << 16 | bytes[6] << 8 | bytes[7];
+  var lon = lon_coord / 1000000 - 180;
+  
+  var alt = (bytes[8] << 8 | bytes[9]);
+  
+  var sats = bytes[10];
+
+    return {
+      latitude:  Math.round(lat*1000000)/1000000,
+      longitude:  Math.round(lon*1000000)/1000000,
+      altitude: alt,
+      sat: sats
+    }
+}

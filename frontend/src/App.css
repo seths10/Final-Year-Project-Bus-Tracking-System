@@ -1,0 +1,92 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+/* 6469ff */
+
+.marker {
+  position: relative;
+}
+
+.marker::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -135%;
+  z-index: -10;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000000;
+  animation: markerScale 6s infinite;
+  border: 6px solid white;
+}
+
+.station {
+  position: relative;
+}
+
+.station::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -135%;
+  z-index: -10;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #000000;
+  animation: stationScale 10s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes markerScale {
+  0% {
+    transform: scale(0.45);
+  }
+  50% {
+    transform: scale(0.52);
+  }
+  100% {
+    transform: scale(0.45);
+  }
+}
+
+@keyframes stationScale {
+  0% {
+    transform: scale(0.40);
+  }
+  50% {
+    transform: scale(0.40);
+  }
+  100% {
+    transform: scale(0.40);
+  }
+}
